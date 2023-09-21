@@ -1,7 +1,8 @@
+import Spinner from "airbnb/components/common/Spinner";
 import React from "react";
 
-const page = () => {
-  return <div>page</div>;
+const loading = () => {
+  return <Spinner />;
 };
 
-export default page;
+export default loading;
