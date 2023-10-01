@@ -96,9 +96,9 @@ export class ListingControllerBase {
   //   action: "read",
   //   possession: "any",
   // })
-  @swagger.ApiForbiddenResponse({
-    type: errors.ForbiddenException,
-  })
+  // @swagger.ApiForbiddenResponse({
+  //   type: errors.ForbiddenException,
+  // })
   async findMany(@common.Req() request: Request): Promise<Listing[]> {
     const args = plainToClass(ListingFindManyArgs, request.query);
     return this.service.findMany({
@@ -153,6 +153,8 @@ export class ListingControllerBase {
         listingCreatedBy: {
           select: {
             id: true,
+            firstName: true,
+            lastName: true,
           },
         },
 

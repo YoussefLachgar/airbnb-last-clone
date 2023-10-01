@@ -27,7 +27,7 @@ const MapView = () => {
   ))
 
   return (
-    <div className="h-[72.5vh] max-w-[100vw] pt-2">
+    <div className="h-[73vh] max-w-[100vw] pt-2">
       <Map
         initialViewState={{
           longitude: -79.4512,
